@@ -1,0 +1,20 @@
+quantidade = int(input("Digite a quantidade do produto adquirida: "))
+preco_unitario = float(input("Digite o preço unitário do produto: "))
+
+valor_total = quantidade * preco_unitario
+
+if quantidade <= 5:
+    desconto_percentual = 2
+elif 6 <= quantidade <= 10:
+    desconto_percentual = 3
+else:
+    desconto_percentual = 5
+
+desconto = (desconto_percentual / 100) * valor_total
+
+valor_com_desconto = valor_total - desconto
+
+print(f"Valor total sem desconto: R$ {valor_total:.2f}")
+print(f"Desconto aplicado: {desconto_percentual}%")
+print(f"Valor do desconto: R$ {desconto:.2f}")
+print(f"Valor total com desconto: R$ {valor_com_desconto:.2f}")
